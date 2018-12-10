@@ -12,6 +12,10 @@ public func routes(_ router: Router) throws {
         return "Hello, world111!"
     }
 
+    router.get("home") { req in
+        return "See home page!"
+    }
+    
     // Example of configuring a controller
     let todoController = TodoController()
     router.get("todos", use: todoController.index)
